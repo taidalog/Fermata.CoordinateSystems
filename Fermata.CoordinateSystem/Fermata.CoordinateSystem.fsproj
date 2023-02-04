@@ -18,6 +18,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Fermata.CoordinateSystem.fsi" />
     <Compile Include="Fermata.CoordinateSystem.fs" />
   </ItemGroup>
 
