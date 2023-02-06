@@ -200,9 +200,163 @@ namespace Fermata
         [<RequireQualifiedAccess>]
         module Cartesian =
             
-            val create: (Rectangle -> Origin -> float -> float -> Cartesian)
+            /// <summary>Builds a new <c>Cartesian</c> record.</summary>
+            /// 
+            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Cartesian</c> coordinate is to be pointed within.</param>
+            /// 
+            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
+            /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// 
+            /// <param name="x">The x axis for the built <c>Cartesian</c> record.</param>
+            /// 
+            /// <param name="y">The y axis for the built <c>Cartesian</c> record.</param>
+            /// 
+            /// <returns>The built <c>Cartesian</c> record.</returns>
+            /// 
+            /// <example id="cartesian-create-1">
+            /// <code lang="fsharp">
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
+            /// let origin = { Origin.X = 0.; Y = 0. }
+            /// Cartesian.create rect origin 40. -20.
+            /// </code>
+            /// Evaluates to the record below:
+            /// <code lang="fsharp">
+            /// Screen = { Rectangle = { Width = 200.0
+            ///                          Height = 100.0 }
+            ///            Origin = { X = 0.0
+            ///                       Y = 0.0 }
+            ///            Coordinate = { X = 40.0
+            ///                           Y = -20.0 } }
+            /// </code>
+            /// </example>
+            val create:
+              rectangle: Rectangle ->
+                origin: Origin -> x: float -> y: float -> Cartesian
             
-            val toScreen: (Origin -> Cartesian -> Screen)
+            /// <summary>Builds a new <c>Screen</c> record from the given <c>Cartesian</c> record.</summary>
+            /// 
+            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
+            /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// 
+            /// <param name="cartesian">The input <c>Cartisian</c> record.</param>
+            /// 
+            /// <returns>The result <c>Screen</c> record.</returns>
+            /// 
+            /// <example id="toscreen-1">
+            /// <code lang="fsharp">
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
+            /// let cartesianOrigin = { Origin.X = 100.; Y = 50. }
+            /// let c = Cartesian.create rect cartesianOrigin 20. -30.
+            /// 
+            /// let screenOrigin = { Origin.X = 0.; Y = 0. }
+            /// c |> Cartesian.toScreen screenOrigin
+            /// </code>
+            /// Evaluates to the record below:
+            /// <code lang="fsharp">
+            /// Screen = { Rectangle = { Width = 200.0
+            ///                          Height = 100.0 }
+            ///            Origin = { X = 0.0
+            ///                       Y = 0.0 }
+            ///            Coordinate = { X = 120.0
+            ///                           Y = 80.0 } }
+            /// </code>
+            /// </example>
+            /// 
+            /// <example id="toscreen-2">
+            /// <code lang="fsharp">
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
+            /// let cartesianOrigin =
+            ///     {
+            ///         Origin.X = rect.Width / 2. |> int |> float
+            ///         Origin.Y = rect.Height / 2. |> int |> float
+            ///     }
+            /// let c = Cartesian.create rect cartesianOrigin 20. -30.
+            /// 
+            /// let screenOrigin = { Origin.X = 0.; Y = 0. }
+            /// c |> Cartesian.toScreen screenOrigin
+            /// </code>
+            /// Evaluates to the record below:
+            /// <code lang="fsharp">
+            /// Screen = { Rectangle = { Width = 200.0
+            ///                          Height = 100.0 }
+            ///            Origin = { X = 0.0
+            ///                       Y = 0.0 }
+            ///            Coordinate = { X = 120.0
+            ///                           Y = 80.0 } }
+            /// </code>
+            /// </example>
+            /// 
+            /// <example id="toscreen-3">
+            /// <code lang="fsharp">
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
+            /// let cartesianOrigin = { Origin.X = 100.; Y = 50. }
+            /// let c = Cartesian.create rect cartesianOrigin 20. -30.
+            /// 
+            /// let screenOrigin = { Origin.X = 20.; Y = 10. }
+            /// c |> Cartesian.toScreen screenOrigin
+            /// </code>
+            /// Evaluates to the record below:
+            /// <code lang="fsharp">
+            /// Screen = { Rectangle = { Width = 200.0
+            ///                          Height = 100.0 }
+            ///            Origin = { X = 20.0
+            ///                       Y = 10.0 }
+            ///            Coordinate = { X = 100.0
+            ///                           Y = 70.0 } }
+            /// </code>
+            /// </example>
+            val toScreen: origin: Origin -> cartesian: Cartesian -> Screen
             
-            val ofScreen: (Origin -> Screen -> Cartesian)
+            /// <summary>Builds a new <c>Cartesian</c> record from the given <c>Screen</c> record.</summary>
+            /// 
+            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
+            /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// 
+            /// <param name="screen">The input <c>Screen</c> record.</param>
+            /// 
+            /// <returns>The result <c>Cartesian</c> record.</returns>
+            /// 
+            /// <example id="ofscreen-1">
+            /// <code lang="fsharp">
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
+            /// let screenOrigin = { Origin.X = 0.; Y = 0. }
+            /// let s = Screen.create rect screenOrigin 0. 30.
+            /// 
+            /// let cartesianOrigin = { Origin.X = 100.; Y = 50. }
+            /// Cartesian.ofScreen cartesianOrigin s
+            /// </code>
+            /// Evaluates to the record below:
+            /// <code lang="fsharp">
+            /// Cartesian = { Rectangle = { Width = 200.0
+            ///                             Height = 100.0 }
+            ///               Origin = { X = 100.0
+            ///                          Y = 50.0 }
+            ///               Coordinate = { X = -100.0
+            ///                              Y = 20.0 } }
+            /// </code>
+            /// </example>
+            /// 
+            /// <example id="ofscreen-2">
+            /// <code lang="fsharp">
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
+            /// let screenOrigin = { Origin.X = 20.; Y = 10. }
+            /// let s = Screen.create rect screenOrigin 100. 70.
+            /// 
+            /// let cartesianOrigin = { Origin.X = 100.; Y = 50. }
+            /// Cartesian.ofScreen cartesianOrigin s
+            /// </code>
+            /// Evaluates to the record below:
+            /// <code lang="fsharp">
+            /// Cartesian = { Rectangle = { Width = 200.0
+            ///                             Height = 100.0 }
+            ///               Origin = { X = 100.0
+            ///                          Y = 50.0 }
+            ///               Coordinate = { X = 20.0
+            ///                              Y = -30.0 } }
+            /// </code>
+            /// </example>
+            val ofScreen: origin: Origin -> screen: Screen -> Cartesian
 
