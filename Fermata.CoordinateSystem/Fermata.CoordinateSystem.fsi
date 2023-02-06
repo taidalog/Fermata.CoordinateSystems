@@ -43,11 +43,11 @@ namespace Fermata
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
             /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
-            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
-            /// <param name="x">The x coordinate for the built <c>Screen</c> record.</param>
+            /// <param name="x">The x-coordinate for the built <c>Screen</c> record.</param>
             /// 
-            /// <param name="y">The y coordinate for the built <c>Screen</c> record.</param>
+            /// <param name="y">The y-coordinate for the built <c>Screen</c> record.</param>
             /// 
             /// <returns>The result <c>Screen</c> record.</returns>
             /// 
@@ -75,7 +75,7 @@ namespace Fermata
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
             /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
-            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="screen">The input <c>Screen</c> record.</param>
             /// 
@@ -150,7 +150,7 @@ namespace Fermata
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
             /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
-            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="cartesian">The input <c>Cartisian</c> record.</param>
             /// 
@@ -206,11 +206,11 @@ namespace Fermata
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
             /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
-            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
-            /// <param name="x">The x coordinate for the built <c>Cartesian</c> record.</param>
+            /// <param name="x">The x-coordinate for the built <c>Cartesian</c> record.</param>
             /// 
-            /// <param name="y">The y coordinate for the built <c>Cartesian</c> record.</param>
+            /// <param name="y">The y-coordinate for the built <c>Cartesian</c> record.</param>
             /// 
             /// <returns>The built <c>Cartesian</c> record.</returns>
             /// 
@@ -238,7 +238,7 @@ namespace Fermata
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
             /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
-            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="cartesian">The input <c>Cartisian</c> record.</param>
             /// 
@@ -313,7 +313,7 @@ namespace Fermata
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
             /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
-            /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
+            /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="screen">The input <c>Screen</c> record.</param>
             /// 
