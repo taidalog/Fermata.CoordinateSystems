@@ -39,10 +39,10 @@ namespace Fermata
             
             /// <summary>Builds a new <c>Screen</c> record.</summary>
             /// 
-            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Screen</c> coordinate lies within.</param>
+            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Screen</c> point lies within.</param>
             /// 
-            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
-            /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// <param name="origin">An <c>Origin</c> record to be used for the built <c>Screen</c> record.
+            /// <c>Origin</c> has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="x">The x-coordinate for the built <c>Screen</c> record.</param>
@@ -63,8 +63,8 @@ namespace Fermata
             ///                          Height = 100.0 }
             ///            Origin = { X = 0.0
             ///                       Y = 0.0 }
-            ///            Coordinate = { X = 120.0
-            ///                           Y = 80.0 } }
+            ///            Point = { X = 120.0
+            ///                      Y = 80.0 } }
             /// </code>
             /// </example>
             val create:
@@ -73,8 +73,8 @@ namespace Fermata
             
             /// <summary>Builds a new <c>Cartesian</c> record from the given <c>Screen</c> record.</summary>
             /// 
-            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
-            /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// <param name="origin">An <c>Origin</c> record to be used for the built <c>Cartesian</c> record.
+            /// Though it is for the Cartesian coordinate, <c>Origin</c> has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="screen">The input <c>Screen</c> record.</param>
@@ -96,8 +96,8 @@ namespace Fermata
             ///                             Height = 100.0 }
             ///               Origin = { X = 100.0
             ///                          Y = 50.0 }
-            ///               Coordinate = { X = 20.0
-            ///                              Y = -30.0 } }
+            ///               Point = { X = 20.0
+            ///                         Y = -30.0 } }
             /// </code>
             /// </example>
             /// 
@@ -120,8 +120,8 @@ namespace Fermata
             ///                             Height = 100.0 }
             ///               Origin = { X = 100.0
             ///                          Y = 50.0 }
-            ///               Coordinate = { X = 20.0
-            ///                              Y = -30.0 } }
+            ///               Point = { X = 20.0
+            ///                         Y = -30.0 } }
             /// </code>
             /// </example>
             /// 
@@ -140,16 +140,16 @@ namespace Fermata
             ///                             Height = 100.0 }
             ///               Origin = { X = 50.0
             ///                          Y = 80.0 }
-            ///               Coordinate = { X = 70.0
-            ///                              Y = 0.0 } }
+            ///               Point = { X = 70.0
+            ///                         Y = 0.0 } }
             /// </code>
             /// </example>
             val toCartesian: origin: Origin -> screen: Screen -> Cartesian
             
             /// <summary>Builds a new <c>Screen</c> record from the given <c>Cartesian</c> record.</summary>
             /// 
-            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
-            /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// <param name="origin">An <c>Origin</c> record to be used for the built <c>Screen</c> record.
+            /// <c>Origin</c> has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="cartesian">The input <c>Cartisian</c> record.</param>
@@ -171,8 +171,8 @@ namespace Fermata
             ///                          Height = 100.0 }
             ///            Origin = { X = 0.0
             ///                       Y = 0.0 }
-            ///            Coordinate = { X = 100.0
-            ///                           Y = 20.0 } }
+            ///            Point = { X = 100.0
+            ///                      Y = 20.0 } }
             /// </code>
             /// </example>
             /// 
@@ -191,8 +191,8 @@ namespace Fermata
             ///                          Height = 100.0 }
             ///            Origin = { X = 0.0
             ///                       Y = 0.0 }
-            ///            Coordinate = { X = 50.0
-            ///                           Y = 50.0 } }
+            ///            Point = { X = 50.0
+            ///                      Y = 50.0 } }
             /// </code>
             /// </example>
             val ofCartesian: origin: Origin -> cartesian: Cartesian -> Screen
@@ -202,10 +202,10 @@ namespace Fermata
             
             /// <summary>Builds a new <c>Cartesian</c> record.</summary>
             /// 
-            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Cartesian</c> coordinate lies within.</param>
+            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Cartesian</c> point lies within.</param>
             /// 
-            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
-            /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// <param name="origin">An <c>Origin</c> record to be used for the built <c>Cartesian</c> record.
+            /// Though it is for the Cartesian coordinate, <c>Origin</c> has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="x">The x-coordinate for the built <c>Cartesian</c> record.</param>
@@ -226,8 +226,8 @@ namespace Fermata
             ///                             Height = 100.0 }
             ///               Origin = { X = 0.0
             ///                          Y = 0.0 }
-            ///               Coordinate = { X = 40.0
-            ///                              Y = -20.0 } }
+            ///               Point = { X = 40.0
+            ///                         Y = -20.0 } }
             /// </code>
             /// </example>
             val create:
@@ -236,8 +236,8 @@ namespace Fermata
             
             /// <summary>Builds a new <c>Screen</c> record from the given <c>Cartesian</c> record.</summary>
             /// 
-            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
-            /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// <param name="origin">An <c>Origin</c> record to be used for the built <c>Screen</c> record.
+            /// <c>Origin</c> has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="cartesian">The input <c>Cartisian</c> record.</param>
@@ -259,8 +259,8 @@ namespace Fermata
             ///                          Height = 100.0 }
             ///            Origin = { X = 0.0
             ///                       Y = 0.0 }
-            ///            Coordinate = { X = 120.0
-            ///                           Y = 80.0 } }
+            ///            Point = { X = 120.0
+            ///                      Y = 80.0 } }
             /// </code>
             /// </example>
             /// 
@@ -283,8 +283,8 @@ namespace Fermata
             ///                          Height = 100.0 }
             ///            Origin = { X = 0.0
             ///                       Y = 0.0 }
-            ///            Coordinate = { X = 120.0
-            ///                           Y = 80.0 } }
+            ///            Point = { X = 120.0
+            ///                      Y = 80.0 } }
             /// </code>
             /// </example>
             /// 
@@ -303,16 +303,16 @@ namespace Fermata
             ///                          Height = 100.0 }
             ///            Origin = { X = 20.0
             ///                       Y = 10.0 }
-            ///            Coordinate = { X = 100.0
-            ///                           Y = 70.0 } }
+            ///            Point = { X = 100.0
+            ///                      Y = 70.0 } }
             /// </code>
             /// </example>
             val toScreen: origin: Origin -> cartesian: Cartesian -> Screen
             
             /// <summary>Builds a new <c>Cartesian</c> record from the given <c>Screen</c> record.</summary>
             /// 
-            /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
-            /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
+            /// <param name="origin">An <c>Origin</c> record to be used for the built <c>Cartesian</c> record.
+            /// Though it is for the Cartesian coordinate, <c>Origin</c> has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x-coordinate grows as it goes right, and y-coordinate grows as it goes down.</param>
             /// 
             /// <param name="screen">The input <c>Screen</c> record.</param>
@@ -334,8 +334,8 @@ namespace Fermata
             ///                             Height = 100.0 }
             ///               Origin = { X = 100.0
             ///                          Y = 50.0 }
-            ///               Coordinate = { X = -100.0
-            ///                              Y = 20.0 } }
+            ///               Point = { X = -100.0
+            ///                         Y = 20.0 } }
             /// </code>
             /// </example>
             /// 
@@ -354,8 +354,8 @@ namespace Fermata
             ///                             Height = 100.0 }
             ///               Origin = { X = 100.0
             ///                          Y = 50.0 }
-            ///               Coordinate = { X = 20.0
-            ///                              Y = -30.0 } }
+            ///               Point = { X = 20.0
+            ///                         Y = -30.0 } }
             /// </code>
             /// </example>
             val ofScreen: origin: Origin -> screen: Screen -> Cartesian
