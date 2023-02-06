@@ -45,9 +45,9 @@ namespace Fermata
             /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
             /// 
-            /// <param name="x">The x axis for the built <c>Screen</c> record.</param>
+            /// <param name="x">The x coordinate for the built <c>Screen</c> record.</param>
             /// 
-            /// <param name="y">The y axis for the built <c>Screen</c> record.</param>
+            /// <param name="y">The y coordinate for the built <c>Screen</c> record.</param>
             /// 
             /// <returns>The result <c>Screen</c> record.</returns>
             /// 
@@ -208,9 +208,9 @@ namespace Fermata
             /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
             /// in which (0, 0) is the upper left corner, x grows as it goes right, and y grows as it goes down.</param>
             /// 
-            /// <param name="x">The x axis for the built <c>Cartesian</c> record.</param>
+            /// <param name="x">The x coordinate for the built <c>Cartesian</c> record.</param>
             /// 
-            /// <param name="y">The y axis for the built <c>Cartesian</c> record.</param>
+            /// <param name="y">The y coordinate for the built <c>Cartesian</c> record.</param>
             /// 
             /// <returns>The built <c>Cartesian</c> record.</returns>
             /// 
