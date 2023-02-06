@@ -8,26 +8,26 @@ namespace Fermata
               Height: float
             }
         
-        type Coordinate =
+        type Point =
             {
               X: float
               Y: float
             }
         
-        type Origin = Coordinate
+        type Origin = Point
         
         type Screen =
             {
               Rectangle: Rectangle
               Origin: Origin
-              Coordinate: Coordinate
+              Point: Point
             }
         
         type Cartesian =
             {
               Rectangle: Rectangle
               Origin: Origin
-              Coordinate: Coordinate
+              Point: Point
             }
         
         val createCartesian:

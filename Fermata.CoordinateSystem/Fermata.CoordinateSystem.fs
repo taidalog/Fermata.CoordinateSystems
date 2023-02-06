@@ -5,29 +5,29 @@ module CoordinateSystem =
         { Width : float
           Height : float }
     
-    type Coordinate =
+    type Point =
         { X : float
           Y : float }
     
-    type Origin = Coordinate
+    type Origin = Point
 
     type Screen =
         { Rectangle : Rectangle
           Origin : Origin
-          Coordinate : Coordinate }
+          Point : Point }
     
     type Cartesian =
         { Rectangle : Rectangle
           Origin : Origin
-          Coordinate : Coordinate }
+          Point : Point }
     
 
     let createCartesian (rectangle: Rectangle) (origin: Origin) (x: float) (y: float) : Cartesian =
         {
             Cartesian.Rectangle = rectangle
             Cartesian.Origin = origin
-            Cartesian.Coordinate =
-                { Coordinate.X = x; Y = y }
+            Cartesian.Point =
+                { Point.X = x; Y = y }
         }
     
 
@@ -37,18 +37,18 @@ module CoordinateSystem =
             {
                 Screen.Rectangle = rectangle
                 Screen.Origin = origin
-                Screen.Coordinate =
-                    { Coordinate.X = x; Y = y }
+                Screen.Point =
+                    { Point.X = x; Y = y }
             }
         
         let toCartesian (origin: Origin) (screen: Screen) : Cartesian =
-            let x' = screen.Coordinate.X + (screen.Origin.X - origin.X)
-            let y' = -screen.Coordinate.Y - (screen.Origin.Y - origin.Y)
+            let x' = screen.Point.X + (screen.Origin.X - origin.X)
+            let y' = -screen.Point.Y - (screen.Origin.Y - origin.Y)
             createCartesian screen.Rectangle origin x' y'
         
         let ofCartesian (origin: Origin) (cartesian: Cartesian) : Screen =
-            let x' = cartesian.Coordinate.X + (cartesian.Origin.X - origin.X)
-            let y' = -cartesian.Coordinate.Y + (cartesian.Origin.Y - origin.Y)
+            let x' = cartesian.Point.X + (cartesian.Origin.X - origin.X)
+            let y' = -cartesian.Point.Y + (cartesian.Origin.Y - origin.Y)
             create cartesian.Rectangle origin x' y'
     
 
