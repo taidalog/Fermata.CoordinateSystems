@@ -39,7 +39,7 @@ namespace Fermata
             
             /// <summary>Builds a new <c>Screen</c> record.</summary>
             /// 
-            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Screen</c> coordinate is to be pointed within.</param>
+            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Screen</c> coordinate lies within.</param>
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Screen</c> record.
             /// <c>Origin</c> coordinate has to be given in the screen coordinate format,
@@ -202,7 +202,7 @@ namespace Fermata
             
             /// <summary>Builds a new <c>Cartesian</c> record.</summary>
             /// 
-            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Cartesian</c> coordinate is to be pointed within.</param>
+            /// <param name="rectangle">A <c>Rectangle</c> record which the built <c>Cartesian</c> coordinate lies within.</param>
             /// 
             /// <param name="origin">An <c>Origin</c> coordinate record to be used for the built <c>Cartesian</c> record.
             /// Though it is for the Cartesian coordinate, <c>Origin</c> coordinate has to be given in the screen coordinate format,
