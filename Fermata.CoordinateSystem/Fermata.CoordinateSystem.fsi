@@ -222,12 +222,12 @@ namespace Fermata
             /// </code>
             /// Evaluates to the record below:
             /// <code lang="fsharp">
-            /// Screen = { Rectangle = { Width = 200.0
-            ///                          Height = 100.0 }
-            ///            Origin = { X = 0.0
-            ///                       Y = 0.0 }
-            ///            Coordinate = { X = 40.0
-            ///                           Y = -20.0 } }
+            /// Cartesian = { Rectangle = { Width = 200.0
+            ///                             Height = 100.0 }
+            ///               Origin = { X = 0.0
+            ///                          Y = 0.0 }
+            ///               Coordinate = { X = 40.0
+            ///                              Y = -20.0 } }
             /// </code>
             /// </example>
             val create:
