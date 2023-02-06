@@ -54,8 +54,11 @@ module CoordinateSystem =
 
     [<RequireQualifiedAccess>]
     module Cartesian =
-        let create = createCartesian
+        let create (rectangle: Rectangle) (origin: Origin) (x: float) (y: float) : Cartesian = 
+            createCartesian rectangle origin x y
         
-        let toScreen = Screen.ofCartesian
+        let toScreen (origin: Origin) (cartesian: Cartesian) : Screen =
+            Screen.ofCartesian origin cartesian
         
-        let ofScreen = Screen.toCartesian
+        let ofScreen (origin: Origin) (screen: Screen) : Cartesian =
+            Screen.toCartesian origin screen
