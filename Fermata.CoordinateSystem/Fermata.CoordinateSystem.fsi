@@ -53,7 +53,7 @@ namespace Fermata
             /// 
             /// <example id="screen-create-1">
             /// <code lang="fsharp">
-            /// let rect = { Rectangle.Width = 200.; Y = 100. }
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
             /// let origin = { Origin.X = 0.; Y = 0. }
             /// Screen.create rect origin 120. 80.
             /// </code>
@@ -83,7 +83,7 @@ namespace Fermata
             /// 
             /// <example id="tocartesian-1">
             /// <code lang="fsharp">
-            /// let rect = { Rectangle.Width = 200.; Y = 100. }
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
             /// let screenOrigin = { Origin.X = 0.; Y = 0. }
             /// let s = Screen.create rect screenOrigin 120. 80.
             /// 
@@ -103,7 +103,7 @@ namespace Fermata
             /// 
             /// <example id="tocartesian-2">
             /// <code lang="fsharp">
-            /// let rect = { Rectangle.Width = 200.; Y = 100. }
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
             /// let screenOrigin = { Origin.X = 0.; Y = 0. }
             /// let s = Screen.create rect screenOrigin 120. 80.
             /// 
@@ -127,7 +127,7 @@ namespace Fermata
             /// 
             /// <example id="tocartesian-3">
             /// <code lang="fsharp">
-            /// let rect = { Rectangle.Width = 200.; Y = 100. }
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
             /// let screenOrigin = { Origin.X = 0.; Y = 0. }
             /// let s = Screen.create rect screenOrigin 120. 80.
             /// 
@@ -158,7 +158,7 @@ namespace Fermata
             /// 
             /// <example id="ofcartesian-1">
             /// <code lang="fsharp">
-            /// let rect = { Rectangle.Width = 200.; Y = 100. }
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
             /// let cartesianOrigin = { Origin.X = 100.; Y = 50. }
             /// let c = Cartesian.create rect cartesianOrigin 0. 30.
             /// 
@@ -178,7 +178,7 @@ namespace Fermata
             /// 
             /// <example id="ofcartesian-2">
             /// <code lang="fsharp">
-            /// let rect = { Rectangle.Width = 200.; Y = 100. }
+            /// let rect = { Rectangle.Width = 200.; Height = 100. }
             /// let cartesianOrigin = { Origin.X = 50.; Y = 80. }
             /// let c = Cartesian.create rect cartesianOrigin 0. 30.
             /// 
