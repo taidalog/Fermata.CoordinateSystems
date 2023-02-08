@@ -1,6 +1,6 @@
 ﻿namespace Fermata
 
-module CoordinateSystem =
+module CoordinateSystems =
     type Rectangle =
         { Width : float
           Height : float }

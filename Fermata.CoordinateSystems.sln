@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fermata.CoordinateSystem", "Fermata.CoordinateSystem\Fermata.CoordinateSystem.fsproj", "{CD3AB37E-ABB9-49A7-8351-93D65328E080}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fermata.CoordinateSystems", "Fermata.CoordinateSystems\Fermata.CoordinateSystems.fsproj", "{CD3AB37E-ABB9-49A7-8351-93D65328E080}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

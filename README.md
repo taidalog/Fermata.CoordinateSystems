@@ -1,2 +1,2 @@
-# Fermata.CoordinateSystem
-F# library for operations related to coordinate system.
+# Fermata.CoordinateSystems
+F# library for operations related to coordinate systems.

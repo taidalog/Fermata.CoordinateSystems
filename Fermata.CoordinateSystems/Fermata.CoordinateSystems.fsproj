@@ -3,23 +3,23 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageId>Fermata.CoordinateSystem</PackageId>
+    <PackageId>Fermata.CoordinateSystems</PackageId>
     <Version>0.0.1</Version>
     <Authors>taidalog</Authors>
     <Company />
     <Description>F# library for operation related to coordinate system.</Description>
-    <PackageProjectUrl>https://github.com/taidalog/Fermata.CoordinateSystem</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/taidalog/Fermata.CoordinateSystems</PackageProjectUrl>
     <PackageTags>F#; FSharp; fable; coordinate; library; functional; programming</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright (c) 2023 taidalog</Copyright>
-    <RepositoryUrl>https://github.com/taidalog/Fermata.CoordinateSystem.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/taidalog/Fermata.CoordinateSystems.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Fermata.CoordinateSystem.fsi" />
-    <Compile Include="Fermata.CoordinateSystem.fs" />
+    <Compile Include="Fermata.CoordinateSystems.fsi" />
+    <Compile Include="Fermata.CoordinateSystems.fs" />
   </ItemGroup>
 
   <ItemGroup>
